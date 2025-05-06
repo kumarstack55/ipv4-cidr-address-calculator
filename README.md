@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ipv4-cidr-address-calculator
 
-## Getting Started
+IPv4 CIDRアドレス計算機です。
 
-First, run the development server:
+CIDRをそのまま貼り付けたり、貼り付けたあとにprefixを修正したり、CIDRを比較したり、といった機能を備えた計算機が見つからず、作りました。
+
+## 要件
+
+- Node.js v22.13+
+
+## 開発
+
+### 実行
+
+開発サーバーを開始するには、次のようにします。
 
 ```bash
+# powershell
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで [http://localhost:3000](http://localhost:3000) を参照し、結果を確認します。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 単体テスト
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+単体テストを実行するには、次のようにします。
 
-## Learn More
+```bash
+# powershell
 
-To learn more about Next.js, take a look at the following resources:
+npm test
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+npx jest --watch
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## TODO
 
-## Deploy on Vercel
+- [ ] テキストエリアで、まとめて複数のcidrを入力できるようにする。
+- [ ] ブラウザのローカルストレージにアドレスを保存する。
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 類似のプロジェクト
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [MxToolBox - Subnet Calculator](https://mxtoolbox.com/subnetcalculator.aspx)
+- [cidr.xyz - IP / CIDR Calculator](https://cidr.xyz/)
+- [サブネットマスク計算（IPv4)](https://note.cman.jp/network/subnetmask.cgi)
+
+## LICENSE
+
+MIT
